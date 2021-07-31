@@ -1,0 +1,40 @@
+<script type="text/javascript">
+//generate a random number between minimun and maximun number
+//Ask de user to guess a number between minimun and maximun number
+// if the numbers guessed by user matches with number generated then user wins
+
+var MIN =1;
+MAX = 10;
+var secretNumber = Math.floor(Math.random()*(MAX - MIN +1))+ MIN;
+var guesses =0; // for storing number of guesses
+var hint = ''; // for storing hint
+   
+	   do {
+	   //get input from user
+	   var input = prompt('Please guess a number between '+ MIN+ ' and' +MAX
+	   + '\n and if it matches with computer guess, then you win. \n'+ hint);
+	   if( input == null){
+	        // it is null when the user clicks on cancell
+		   ask = confirm("you have not tried the game! \nDo you want to exit?" );
+			   if(ask == true){
+			   
+			   alert("Thanks! Visit again.");
+			   document.write("<h1>Thanks! Visit again. </h1>");
+			   break;
+			   }
+	   }else{
+		   // get the equivalent integer of the entered number
+		   var number = parseInt(input);
+		   // increase the number of guesses
+		   guesses++;
+		   if(number == secretNumber){
+				alert('Bravo! you are correct after '+ guesses+ 'guess (es). ');
+		   }else{
+		   hint ='Your number is not matching with computer guess, \nPlease guess again' ;
+		   }
+		   
+	   }
+	   }while( number != secretNumber);
+
+
+</script>
