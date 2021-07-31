@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Formulario</title>
+    </head>
+    <body>
+        <form>
+            <fieldset>
+            <label for="nombre">Nombre del usuario*:</label><br/>
+            <input type="text" placeholder="Ej:Luis" name="nombre" required><br/>
+            <label for="email">Email*:</label><br/>
+            <input type="text" placeholder="Ej:Luis@hotmail.com" name="email" required><br/>
+            <label for="edad">Edad*:</label><br/>
+            <input type="text" placeholder="Ej 21" name="edad" required><br/>
+            <label for="genero">Género</label><br/>
+            <input type="radio" id="mujer" value="F" name="genero" required>
+            <label for="mujer">Mujer</label>
+            <input type="radio" id="hombre" value ="H" name="genero" required>
+            <label for="hombre">Hombre</label><br/>
+
+            <label for="nombre">Recomendado*</label><br/>
+            <select name="recomendado" required>
+                <option value="1">Google</option>
+                <option value="1">Amigos</option>
+                <option value="1">Redes Sociales</option>
+
+            </select>
+
+
+            <p>
+                <label for="comentario">Comentario</label><br />
+                <textarea name="comentario" cols="30" rows="10" required></textarea>
+              </p>
+              <p>
+                  <input type="checkbox" id="terminos" value="yes" required>
+                  <label for="terminos">Acepto términos y condiciones*</label>
+              </p>
+              <p>
+                <input type="submit" value="Registrar" />
+              </p>
+            </fieldset>
+        </form>
+
+    </body>
+</html>
